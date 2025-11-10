@@ -45,10 +45,6 @@ export const logMessage = (message: AIMessage) => {
       message.tool_calls.forEach((tool) => {
         console.log(`\n${color}[ASSISTANT]${reset}`)
         console.log(`${tool.function.name}\n`)
-
-        if (tool.function.name === generateImageToolDefinition.name) {
-          console.log('\nDo you approve generating an image? (yes/no)\n')
-        }
       })
       return
     }
